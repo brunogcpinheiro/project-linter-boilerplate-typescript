@@ -9,11 +9,11 @@
     "build": "sucrase ./src -d ./dist --transforms typescript,imports"
   },
   "lint-staged": {
-    "*.ts": [
+    "**/*.ts": [
       "eslint --fix",
       "git add"
     ],
-    "*.js": [
+    "**/*.js": [
       "eslint --fix",
       "git add"
     ]
