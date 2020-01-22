@@ -10,19 +10,17 @@
   },
   "lint-staged": {
     "*.ts": [
-      "yarn run build",
       "eslint --fix",
       "git add"
     ],
     "*.js": [
-      "yarn run build",
       "eslint --fix",
       "git add"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "yarn run build && lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
