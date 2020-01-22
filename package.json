@@ -5,9 +5,13 @@
   "repository": "https://github.com/brunogcpinheiro/project-linter-boilerplate.git",
   "author": "Bruno Pinheiro <brunogcpinheiro@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "sucrase ./src -d ./dist --transforms typescript,imports"
+  },
   "lint-staged": {
     "*.ts": [
       "eslint --fix",
+      "npm run build",
       "git add"
     ],
     "*.js": [
@@ -40,6 +44,7 @@
     "husky": "^4.2.0",
     "lint-staged": "^10.0.2",
     "prettier": "^1.19.1",
+    "sucrase": "^3.12.1",
     "typescript": "^3.7.5"
   },
   "config": {
