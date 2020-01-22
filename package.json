@@ -11,12 +11,10 @@
   "lint-staged": {
     "*.ts": [
       "eslint --fix",
-      "npm run build",
-      "git add"
+      "npm run build"
     ],
     "*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "husky": {
